@@ -241,7 +241,11 @@ class Zend_ProgressBar_Adapter_ConsoleTest extends PHPUnit\Framework\TestCase
 
     public function testSetOutputStreamOpenFail()
     {
-        $this->expectException(Zend_ProgressBar_Adapter_Exception::class);
+        if (version_compare(PHP_VERSION, '8.0', '<')) {
+            $this->expectException(Zend_ProgressBar_Adapter_Exception::class);
+        } else {
+            $this->expectException(ValueError::class);
+        }
         $adapter = new Zend_ProgressBar_Adapter_Console();
         $adapter->setOutputStream(null);
     }
