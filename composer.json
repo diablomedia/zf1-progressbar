@@ -14,7 +14,7 @@
         "diablomedia/zendframework1-exception": "^1.1.1",
         "diablomedia/zendframework1-config": "^2.0.5",
         "diablomedia/zendframework1-json": "^1.0.7",
-        "diablomedia/zendframework1-text": "^1.0.4",
+        "diablomedia/zendframework1-text": "dev-php-84 as 1.0.5",
         "diablomedia/zendframework1-session": "^1.1.3"
     },
     "autoload": {
